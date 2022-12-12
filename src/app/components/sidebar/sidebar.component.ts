@@ -16,7 +16,7 @@ export const ROUTES: RouteInfo[] = [
     class: ""
   },
   {
-    path: "/etudiant",
+    path: "/etudiants",
     title: "Etudiant",
     rtlTitle: "الرموز",
     icon: "icon-atom",
@@ -29,7 +29,7 @@ export const ROUTES: RouteInfo[] = [
     icon: "icon-pin",
     class: "" },
   {
-    path: "/contrat",
+    path: "/contrats",
     title: "Contrat",
     rtlTitle: "إخطارات",
     icon: "icon-bell-55",
@@ -37,14 +37,14 @@ export const ROUTES: RouteInfo[] = [
   },
 
   {
-    path: "/universite",
+    path: "/universites",
     title: "universite",
     rtlTitle: "ملف تعريفي للمستخدم",
     icon: "icon-single-02",
     class: ""
   },
   {
-    path: "/departement",
+    path: "/departements",
     title: "Departement",
     rtlTitle: "قائمة الجدول",
     icon: "icon-puzzle-10",

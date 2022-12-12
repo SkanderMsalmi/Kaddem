@@ -1,33 +1,34 @@
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgModule } from "@angular/core";
-import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { RouterModule } from "@angular/router";
-import { ToastrModule } from 'ngx-toastr';
+import { CommonModule } from "@angular/common";
+import {  FormsModule, ReactiveFormsModule } from "@angular/forms";
 
-import { AppComponent } from "./app.component";
-import { AdminLayoutComponent } from "./layouts/admin-layout/admin-layout.component";
+// import { RtlComponent } from "../../pages/rtl/rtl.component";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
-
+import { AppComponent } from "./app.component";
 import { AppRoutingModule } from "./app-routing.module";
-import { ComponentsModule } from "./components/components.module";
-
+import { BrowserModule } from "@angular/platform-browser";
+import { SidebarComponent } from "./components/sidebar/sidebar.component";
+import { FooterComponent } from "./components/footer/footer.component";
+import { NavbarComponent } from "./components/navbar/navbar.component";
 
 @NgModule({
   declarations: [
     AppComponent,
-    AdminLayoutComponent,
+    SidebarComponent,
+    FooterComponent,
+    NavbarComponent,
   ],
   imports: [
-    BrowserAnimationsModule,
+    CommonModule,
     FormsModule,
-    HttpClientModule,
-    ComponentsModule,
-    NgbModule,
-    RouterModule,
+    BrowserModule,
     AppRoutingModule,
-    ToastrModule.forRoot()
+    HttpClientModule,
+    ReactiveFormsModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
