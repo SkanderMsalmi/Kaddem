@@ -1,0 +1,32 @@
+<div class=" col-md-12">
+    <div class=" card">
+      <div class=" card-header">
+        <h4 class=" card-title" >Equipes</h4>
+        <input class="form-control border p-2 " [(ngModel)]="filterText"  placeholder="Entrer Nom d'equipe" aria-label="Search">
+
+      </div>
+      <div class=" card-body">
+        <div class=" table-responsive">
+          <table class=" table tablesorter" id="">
+            <thead class=" text-primary">
+              <tr>
+                <th>Equipe</th>
+                <th>Niveau</th>
+                <th> Modifier</th>
+                <th class=" text-center">Supprimer </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let e of list | filterEquip:filterText">
+                <td>{{e.nomEquipe}}</td>
+                <td>{{e.niveau}}</td>
+                <td><button class="btn btn-primary" [routerLink]="['/equipes/editEquipe',e.idEquipe]">Modifier</button></td>
+                <td class=" text-center"><button class="btn btn-danger" (click)="deleteEquipe(e)" >Supprimer</button></td>
+              </tr>
+             
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
